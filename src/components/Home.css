@@ -1,0 +1,75 @@
+/* Reset body margin and padding */
+.home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 5%;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Container for animated background */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105%;
+    background: url('/graphic_bg.png') no-repeat center center;
+    background-size: cover;
+    animation: waveEffect 8s cubic-bezier(0.42, 0.0, 0.58, 1.0) forwards;
+    z-index: -1;
+}
+
+/* Non-periodic wave animation */
+@keyframes waveEffect {
+    0% { transform: translateY(0) scale(1.05); }
+    20% { transform: translateY(-25px) scale(1.06); }
+    40% { transform: translateY(15px) scale(1.07); }
+    60% { transform: translateY(-20px) scale(1.06); }
+    80% { transform: translateY(10px) scale(1.05); }
+    100% { transform: translateY(0) scale(1.05); }
+}
+
+/* Slide-in text styling */
+.text {
+    color: #00E0FF;
+    font-size: 3rem;
+    text-align: left;
+    letter-spacing: 5px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 8s ease-out forwards;
+}
+
+.text span {
+    color: #FF00FF;
+}
+
+/* Slide-in keyframes for text */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-100%); }
+    70% { opacity: 1; transform: translateX(5%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Button styling */
+.start-btn {
+    margin-top: 2rem;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #00E0FF;
+    border: 2px solid #FF00FF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    background-color: #FF00FF;
+    border-color: #00E0FF;
+}

@@ -1,0 +1,17 @@
+.button {
+  background-color: #fff; /* Black background for the button */
+  color: #000; /* White text */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.button:hover {
+  background-color: #444; /* Darker shade on hover */
+}

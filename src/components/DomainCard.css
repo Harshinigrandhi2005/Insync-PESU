@@ -1,0 +1,62 @@
+/* src/styles/DomainCard.css */
+.domain-card {
+    width: 300px;
+    background-color: rgb(26, 6, 33);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    height: 350px;
+
+}
+
+.domain-card:hover {
+    transform: scale(1.05); /* Enlarge the card slightly on hover */
+}
+
+.image-container {
+    position: relative;
+    height: 20%;
+}
+
+.domain-image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.domain-title {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.info-container {
+    padding: 15px;
+    height:5%;
+}
+
+.problem-status {
+    background-color: rgb(69, 20, 86);
+    padding: 8px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2c213c;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; 
+}
+
+.team-size {
+    background-color: #5a417a;
+    color: #fdfdfd;
+    padding: 8px;
+    border-radius: 25px;
+    font-weight: bold;
+}

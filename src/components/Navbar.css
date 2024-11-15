@@ -1,0 +1,17 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background-color: #151027 !important; /* Force the background color */
+  z-index: 10;
+}
+
+.navbar a {
+  color: white !important;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+

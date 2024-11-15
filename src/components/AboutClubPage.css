@@ -1,0 +1,23 @@
+/* AboutClub.css */
+
+.about-club {
+    /* Style the container for the "About Our Club" content */
+    padding: 2rem;
+    margin: 0 auto; /* Center the content horizontally */
+    max-width: 800px; /* Limit the width for better readability */
+    text-align: justify; /* Align text nicely within the container */
+  }
+  
+  .about-club h1 {
+    /* Style the heading */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-club p {
+    /* Style the paragraph text */
+    font-size: 1rem;
+    line-height: 1.5; /* Improve readability with line spacing */
+  }
+  
+  /* Add any other styles needed for images, videos, etc. */

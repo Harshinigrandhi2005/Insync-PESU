@@ -1,0 +1,81 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+   /* Set Orbitron font */
+  background-color: #1f1637; /* Background color */
+  color: white;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 15px; /* Increased padding for a bigger navbar */
+  background-color: #151027; /* Darker shade for top bar */
+  position: relative;
+  z-index: 10;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px; /* Increased margin between links */
+  font-size: 18px; /* Increased font size */
+  font-weight: bold;
+}
+
+.content {
+  text-align: center;
+  padding-top: -10px; /* Increased padding for better centering */
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+  font-size: 30px;
+}
+
+.content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.content .subheading {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center; /* Center the description */
+}
+
+.highlight1 {
+  color: #00ffff; /* Color for "InSync@PESU" */
+  font-weight: bold;
+}
+
+.highlight2 {
+  color: #FF00FF; /* Color for "InSync@PESU" */
+  font-weight: bold;
+}
+
+.content hr {
+  width: 50px;
+  margin: 20px auto;
+  border: none;
+  border-top: 2px solid #ffffff;
+}
+
+/* Canvas background styling */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

@@ -1,0 +1,41 @@
+/* src/styles/Domains.css */
+body {
+    margin: 0;
+    background: url('/bg_domains.png') no-repeat center center fixed; /* Use the image from the public folder */
+    background-size: cover; /* Ensure the image covers the full background */
+    color: #fff; /* Ensure text is white */
+}
+
+.domains-container {
+    min-height: 100vh; /* Full height of the viewport */
+    text-align: center;
+    padding: 40px;
+    position: relative; /* To position the overlay */
+    color: #fff; /* Text color to white for contrast with the background */
+}
+
+.domains-container::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Place the overlay behind the content */
+}
+
+.domains-title {
+    font-size: 2rem; /* Adjusted for better visibility */
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-style: italic;
+    color: #ffffff; /* White title text */
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
