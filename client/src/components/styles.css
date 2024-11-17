@@ -1,0 +1,264 @@
+/* styles.css */
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #2c1e4a, #270952);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.sidebar {
+    width: 250px;
+    margin-right: 20px;
+    background: linear-gradient(135deg, #2c1e4a, #3a246d);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.calendar {
+    flex-grow: 1;
+    background: linear-gradient(135deg, #2c1e4a, #3a246d);
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 700px;
+}
+
+.month {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #a487e2;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+
+.day {
+    height: 100px;
+    position: relative;
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(145deg, #3a246d, #2c1e4a);
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.day:hover {
+    background: linear-gradient(145deg, #4b2b7f, #3a246d);
+}
+
+.event {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: rgb(197, 194, 204);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.event.workshop { background-color: #4CAF50; }
+.event.conference { background-color: #723dd5; }
+.event.meeting { background-color: #2196F3; }
+.event.deadline { background-color: #F44336; }
+.event.hackathon { background-color: #9C27B0; }
+.event.ideathon { background-color: #00BCD4; }
+.event.cultural { background-color: #5230a9; }
+
+.event-info {
+    width: 300px;
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(145deg, #3a246d, #2c1e4a);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.event-info h2 {
+    margin-bottom: 20px;
+    color: #81C784;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.event-info p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.event-info .event-reminder {
+    margin-top: 10px;
+    color: #a793db;
+    font-weight: bold;
+}
+
+.interest-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.interest-buttons button {
+    width: 48%;
+    padding: 10px;
+    background: linear-gradient(145deg, #2c1e4a, #3a246d);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: none;
+}
+
+.interest-buttons button:hover {
+    background: linear-gradient(145deg, #4b2b7f, #3a246d);
+    transform: scale(1.05);
+}
+
+.interest-buttons button.not-interested {
+    background: linear-gradient(145deg, #F44336, #D32F2F);
+}
+
+.interest-buttons button.not-interested:hover {
+    background: linear-gradient(145deg, #D32F2F, #F44336);
+}
+
+#add-event-btn {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(145deg, #4CAF50, #388E3C);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#add-event-btn:hover {
+    background: linear-gradient(145deg, #388E3C, #4CAF50);
+    transform: scale(1.05);
+}
+
+#event-form {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(145deg, #3a246d, #2c1e4a);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#event-form input,
+#event-form select,
+#event-form textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #2c1e4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#event-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(145deg, #4CAF50, #388E3C);
+    color: white;
+    border-radius: 5px;
+}
+
+#event-form button:hover {
+    background: linear-gradient(145deg, #388E3C, #4CAF50);
+    transform: scale(1.05);
+}
+
+#event-form h3 {
+    text-align: center;
+    color: #81C784;
+}
+
+.event-form {
+    display: block;
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(145deg, #3a246d, #2c1e4a);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.event-form input,
+.event-form select,
+.event-form textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #2c1e4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.event-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(145deg, #4CAF50, #388E3C);
+    color: white;
+    border-radius: 5px;
+}
+
+.event-form button:hover {
+    background: linear-gradient(145deg, #388E3C, #4CAF50);
+}
+
+#add-event-btn {
+    margin-top: 10px;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #6fcb47, #4caf50);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#add-event-btn:hover {
+    background: linear-gradient(145deg, #4caf50, #6fcb47);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#add-event-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
